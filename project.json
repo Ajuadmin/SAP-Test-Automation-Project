@@ -1,0 +1,55 @@
+{
+  "name": "SAP 테스트 자동화 프로젝트",
+  "description": "전표전기 테스트 케이스",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[20.6.1-preview]",
+    "UiPath.Testing.Activities": "[1.1.1-preview]",
+    "UiPath.UIAutomation.Activities": "[20.6.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.6.0.0",
+  "projectVersion": "1.0.2",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "064cf0a7-383c-4776-b945-1187997e75df",
+        "dataVariationFilePath": "",
+        "fileName": "전표전기 테스트 케이스\\S1. 헤더데이터.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "03ec20dc-51a3-43e9-a22a-17fe127eb49e",
+        "dataVariationFilePath": "",
+        "fileName": "전표전기 테스트 케이스\\S2. 추가 구매처 항목 입력.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9b8afda1-4b85-4a34-8974-2ce3330bfaa7",
+        "dataVariationFilePath": "",
+        "fileName": "전표전기 테스트 케이스\\S3. 추가 GL 계정 항목.xaml"
+      }
+    ]
+  },
+  "expressionLanguage": "VisualBasic"
+}

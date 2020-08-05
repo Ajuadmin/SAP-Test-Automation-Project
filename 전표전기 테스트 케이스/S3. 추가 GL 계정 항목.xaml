@@ -1,0 +1,288 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="S3__추가_GL_계정_항목" this:S3__추가_GL_계정_항목.증빙일="2020-08-01" this:S3__추가_GL_계정_항목.전표유형="SA" this:S3__추가_GL_계정_항목.회사코드="AI00" this:S3__추가_GL_계정_항목.통화환율="KRW" this:S3__추가_GL_계정_항목.S1전기키="31" this:S3__추가_GL_계정_항목.S1계정="7101240" this:S3__추가_GL_계정_항목.대변금액="100000" this:S3__추가_GL_계정_항목.사업장="AI11" this:S3__추가_GL_계정_항목.S2전기키="40" this:S3__추가_GL_계정_항목.S2계정="51111954" this:S3__추가_GL_계정_항목.차변금액="100000" this:S3__추가_GL_계정_항목.세금코드="V1" this:S3__추가_GL_계정_항목.텍스트="TEST1" this:S3__추가_GL_계정_항목.코스트센터=" " xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="증빙일" Type="InArgument(x:String)" />
+    <x:Property Name="전표유형" Type="InArgument(x:String)" />
+    <x:Property Name="회사코드" Type="InArgument(x:String)" />
+    <x:Property Name="통화환율" Type="InArgument(x:String)" />
+    <x:Property Name="S1전기키" Type="InArgument(x:String)" />
+    <x:Property Name="S1계정" Type="InArgument(x:String)" />
+    <x:Property Name="대변금액" Type="InArgument(x:String)" />
+    <x:Property Name="사업장" Type="InArgument(x:String)" />
+    <x:Property Name="S2전기키" Type="InArgument(x:String)" />
+    <x:Property Name="S2계정" Type="InArgument(x:String)" />
+    <x:Property Name="차변금액" Type="InArgument(x:String)" />
+    <x:Property Name="세금코드" Type="InArgument(x:String)" />
+    <x:Property Name="텍스트" Type="InArgument(x:String)" />
+    <x:Property Name="코스트센터" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1205.6,2172.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>S3__GL계정전표_입력_추가_GL_계정_항목_입력_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="S3. 추가 GL 계정 항목" sap:VirtualizedContainerService.HintSize="652.8,2008" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="손익센터" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="S2. 추가 구매처 항목 입력 : invoke workflow" sap:VirtualizedContainerService.HintSize="611.2,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="전표전기 테스트 케이스/S2. 추가 구매처 항목 입력.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="증빙일">[증빙일]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="전표유형">[전표유형]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="회사코드">[회사코드]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="통화환율">[통화환율]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="전표헤더텍스트">[텍스트]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="S1전기키">[S1전기키]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="S1계정">[S1계정]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="대변금액">[대변금액]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="사업장">[사업장]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="S2전기키">[S2전기키]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="S2계정">[S2계정]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="30" DisplayName="차변 금액 입력 : Type Into " EmptyField="True" sap:VirtualizedContainerService.HintSize="611.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[차변금액]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2bbf4b1-0b81-41b9-ba61-0c6aec0a2de6" InformativeScreenshot="02e11bcdf336929c3e1fee19b344a7c0" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/txtBSEG-WRBTR' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="30" DelayMS="500" DisplayName="세금 코드 입력 : Type Into " EmptyField="True" sap:VirtualizedContainerService.HintSize="611.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[세금코드]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2bbf4b1-0b81-41b9-ba61-0c6aec0a2de6" InformativeScreenshot="0be2f8d7021f96bbbc0611a8256f04cf" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/ctxtBSEG-MWSKZ' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="세금 계산 체크 : Click" sap:VirtualizedContainerService.HintSize="611.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cf0797d-3b3e-4a1b-b00d-aefea7ea3115" InformativeScreenshot="d6902a628eb49403cd757ac5e073a8db" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/chkBKPF-XMWST' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DelayBetweenKeys="30" DisplayName="사업장 입력 : Type Into " EmptyField="True" sap:VirtualizedContainerService.HintSize="611.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[사업장]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2bbf4b1-0b81-41b9-ba61-0c6aec0a2de6" InformativeScreenshot="0b1434a6cafe3f3ef063c9cdacb4179c" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/ctxtBSEG-BUPLA' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="30" DisplayName="코스트센터 입력 : Type Into " EmptyField="True" sap:VirtualizedContainerService.HintSize="611.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[코스트센터]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2bbf4b1-0b81-41b9-ba61-0c6aec0a2de6" InformativeScreenshot="c04b938d0fffebd769d2bce1926873eb" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/subBLOCK:SAPLKACB:1014/ctxtCOBL-KOSTL' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="30" DisplayName="텍스트 입력 : Type Into " EmptyField="True" sap:VirtualizedContainerService.HintSize="611.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[텍스트]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2bbf4b1-0b81-41b9-ba61-0c6aec0a2de6" InformativeScreenshot="af637c92ebbf2c0e2373d22f99890a7e" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: 추가 G/L 계정항목' /&gt;&lt;sap id='usr/ctxtBSEG-SGTXT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1000" DelayMS="2000" DisplayName="엔터키 입력 : Send Hotkey" sap:VirtualizedContainerService.HintSize="611.2,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1b5e18a3-fb39-4f70-a1d1-ecec96436f47">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="손익 센터 값 가져오기 : Get Text" sap:VirtualizedContainerService.HintSize="611.2,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2fd2722-9303-4e2b-94ba-a3ebc1893f1e" InformativeScreenshot="e15c4422dabcdb17c5bd9303a7ffbad7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: * G/L 계정항목' /&gt;&lt;sap id='usr/subBLOCK:SAPLKACB:1014/ctxtCOBL-PRCTR' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">[손익센터]</OutArgument>
+      </ui:GetValue.Value>
+    </ui:GetValue>
+    <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="611.2,62.4" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+      <uta:VerifyExpressionWithOperator.FirstExpression>
+        <InArgument x:TypeArguments="x:String">[손익센터.ToString]</InArgument>
+      </uta:VerifyExpressionWithOperator.FirstExpression>
+      <uta:VerifyExpressionWithOperator.SecondExpression>
+        <InArgument x:TypeArguments="x:String">["I408"]</InArgument>
+      </uta:VerifyExpressionWithOperator.SecondExpression>
+    </uta:VerifyExpressionWithOperator>
+    <uta:VerifyControlAttribute KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="하단바 메세지 에러 검증 : Verify Control Attribute" sap:VirtualizedContainerService.HintSize="611.2,209.6" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Result" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+      <uta:VerifyControlAttribute.ActivityToTest>
+        <ActivityAction>
+          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="statusMessage" DisplayName="하단바 메세지 가져오기 : Get Attribute" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+            <ui:GetAttribute.Result>
+              <OutArgument x:TypeArguments="x:Object">
+                <VariableReference x:TypeArguments="x:Object">
+                  <VariableReference.Variable>
+                    <Variable x:TypeArguments="x:Object" x:Name="__ReferenceID0" Name="Result" />
+                  </VariableReference.Variable>
+                </VariableReference>
+              </OutArgument>
+            </ui:GetAttribute.Result>
+            <ui:GetAttribute.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9fd4fcb8-91a0-4f34-976f-1af79b33f7fd" InformativeScreenshot="33dd5c9742c9c61f659bd1a5901cd357" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='sbar' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:GetAttribute.Target>
+          </ui:GetAttribute>
+        </ActivityAction>
+      </uta:VerifyControlAttribute.ActivityToTest>
+      <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+        <ActivityFunc x:TypeArguments="x:Object">
+          <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+            <uta:ArgumentsBridge.Input>
+              <InArgument x:TypeArguments="x:Object">
+                <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+              </InArgument>
+            </uta:ArgumentsBridge.Input>
+          </uta:ArgumentsBridge>
+        </ActivityFunc>
+      </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+      <uta:VerifyControlAttribute.Expression>
+        <InArgument x:TypeArguments="x:String">[""]</InArgument>
+      </uta:VerifyControlAttribute.Expression>
+    </uta:VerifyControlAttribute>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="전표 저장 버튼 클릭 : Click" sap:VirtualizedContainerService.HintSize="611.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47fe7747-e222-4d0e-915e-2cd6ee2c4e6f" InformativeScreenshot="b674c3ab89a00501f6d33e5a6657f8ec" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='G/L 계정전표 입력: * G/L 계정항목' /&gt;&lt;sap id='tbar[1]/btn[14]' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+  </Sequence>
+</Activity>
